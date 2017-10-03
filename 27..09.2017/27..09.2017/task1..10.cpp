@@ -110,11 +110,54 @@ double funck(int n)
 
 int main()
 {
+	bool a = true;
 	char r = 'y';
 	while (r == 'y')
 	{
-		cout << "Select a letter tasks(a,b,..,k)" << endl;
-		cin >> numb;
+		a = true;
+		while (a)
+		{
+			cout << "Select a letter tasks(a,b,..,k)" << endl;
+			cin >> numb;
+			switch (numb)
+			{
+				case 'a':
+					a = false;
+					break;
+				case 'v':
+					a = false;
+					break;
+				case 'b':
+					a = false;
+					break;
+				case 'g':
+					a = false;
+					break;
+				case 'd':
+					a = false;
+					break;
+				case 'e':
+					a = false;
+					break;
+				case 'j':
+					a = false;
+					break;
+				case 'z':
+					a = false;
+					break;
+				case 'i':
+					a = false;
+					break;
+				case 'k':
+					a = false;
+					break;
+				default:
+					cout << "invalid data" << endl;
+					a = true;
+					break;
+			}
+
+		}
 		while (true)
 		{
 			cout << "Enter natural number" << endl;
@@ -126,46 +169,34 @@ int main()
 		switch (numb)
 		{
 				case 'a':
-				case 'A':
 					result = funca(n);
 					break;
 				case 'v':
-				case 'V':
 					result = funcv(n);
 					break;
 				case 'b':
-				case 'B':
 					result = funcb(n);
 					break;
-				case 'G':
 				case 'g':
 					result = funcg(n);
 					break;
-				case 'D':
 				case 'd':
 					result = funcd(n);
 					break;
-				case 'E':
 				case 'e':
 					result = funce(n);
 					break;
-				case 'J':
 				case 'j':
 					result = funcj(n);
 					break;
-				case 'Z':
 				case 'z':
 					result = funcz(n);
 					break;
-				case 'I':
 				case 'i':
 					result = funci(n);
 					break;
-				case 'K':
 				case 'k':
 					result = funck(n);
-					break;
-				default:
 					break;
 		}
 
