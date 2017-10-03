@@ -8,7 +8,7 @@ double res;
 double funca(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res += (1.0 / i);
 	}
@@ -22,7 +22,7 @@ double funcb(int n)
 double funcv(int n)
 {
 	res = 1;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res *= (1+(1.0 / i/i));
 	}
@@ -31,7 +31,7 @@ double funcv(int n)
 double funcg(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res += (	pow(-1,i+1) / i/(i+1));
 	}
@@ -40,7 +40,7 @@ double funcg(int n)
 double funcd(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res += (1.0 /pow(i,5));
 	}
@@ -49,7 +49,7 @@ double funcd(int n)
 double funce(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res += (1.0 / pow((2*i+1), 2));
 	}
@@ -58,7 +58,7 @@ double funce(int n)
 double funcj(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res += (pow(-1,i)/(2 * i + 1));
 	}
@@ -69,9 +69,9 @@ double funcz(int n)
 	double zm,ch = 1;
 	zm = 0;
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{	
-		for (int j = 1.0; j <= i; j++)
+		for (int j = 1; j <= i; j++)
 		{
 			ch *= j;
 			zm += (1.0 / j);
@@ -86,7 +86,7 @@ double funcz(int n)
 double funci(int n)
 {
 	res = 0;
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
 		res = sqrt(2 + res);
 	}
@@ -97,13 +97,13 @@ double funck(int n)
 	double zm = 0;
 	res = 0;
 	
-	for (int i = 1.0; i <= n; i++)
+	for (int i = 1; i <= n; i++)
 	{
-		for (int j = 1.0; j <= i; j++)
+		for (int j = 1; j <= i; j++)
 		{
 			zm += sin(j);
 		}
-		res += 1 / zm;
+		res += 1.0 / zm;
 	}
 	return res;
 }
