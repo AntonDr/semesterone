@@ -9,7 +9,7 @@ int main()
 }
 int numbFib()
 {
-	int *Fibnum = new int[20];
+	int Fibnum[20];
 	Fibnum[0] = 0;
 	Fibnum[1] = 1;
 	int i = 1;
@@ -19,5 +19,4 @@ int numbFib()
 		Fibnum[i] = Fibnum[i - 1] + Fibnum[i - 2];
 	}
 	return Fibnum[i];
-	delete[] Fibnum;
 }
