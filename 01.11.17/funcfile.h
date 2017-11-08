@@ -7,6 +7,7 @@ void zeroOne(int &, int &, long long);
 int lounge(int);
 int transToInt(char);
 int howIn(long long, int);
+void checkZeroOne(int, int &, int &);
 int transToSixteenAndCheck(int, char);
 int lounge(int a)
 {
@@ -123,15 +124,29 @@ int howIn(long long c, int na)
 }
 int transToSixteenAndCheck(int a,char find)
 {
-	int b, c,s,k=0;
+	int c,s,k=0;
 	s = transToInt(find);
 	while (a != 0)
 	{
-		b = a / 16;
-		c = a - (b*16);
+		c = a - (16*(a/16));
 		if (c == s) k++;
 		a /= 16;
 	}
 	return k;
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+void checkZeroOne(int a, int & j, int & k)
+{
+	while (a != 0)
+	{
+		if (a % 2 == 0) j++;
+		else k++;
+		a /= 2;
+	}
+}
+=======
+>>>>>>> 8f49ddcb7ac9decf205224390dfc8ecf700f294f
+=======
+>>>>>>> 8f49ddcb7ac9decf205224390dfc8ecf700f294f
