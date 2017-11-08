@@ -4,14 +4,12 @@ using namespace std;
 
 int main()
 {
-	int na;
-	long long a,b, c;
+	int a,na;
+	long long b, c;
 	char find;
 	cin >> a>>find;
-	b = conversion(a);
-	c = conversely(b)/10;
-	na = transToInt(find);
-	cout << howIn(c, na);
+	na=transToSixteenAndCheck(a, find);
+	cout << na;
 	
 	
 	system("pause");

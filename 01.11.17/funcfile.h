@@ -7,6 +7,7 @@ void zeroOne(int &, int &, long long);
 int lounge(int);
 int transToInt(char);
 int howIn(long long, int);
+int transToSixteenAndCheck(int, char);
 int lounge(int a)
 {
 	int i = 0;
@@ -60,49 +61,49 @@ int transToInt(char find)
 	switch ( find)
 	{
 		case 'A':
-			a = 1010;
+			a = 10;
 			break;
 		case 'B':
-			a = 1011;
+			a = 11;
 			break;
 		case 'C':
-			a = 1100;
+			a =12;
 			break;
 		case 'D':
-			a = 1101;
+			a = 13;
 			break;
 		case 'E':
-			a = 1110;
+			a = 14;
 			break;
 		case 'F':
-			a = 1111;
+			a = 15;
 			break;
 		case '1':
 			a = 1;
 			break;
 		case '2':
-			a = 10;
+			a = 2;
 			break;
 		case '3':
-			a = 11;
+			a = 3;
 			break;
 		case '4':
-			a = 100;
+			a = 4;
 			break;
 		case '5':
-			a = 101;
+			a = 5;
 			break;
 		case '6':
-			a = 110;
+			a = 6;
 			break;
 		case '7':
-			a = 111;
+			a = 7;
 			break;
 		case '8':
-			a = 1000;
+			a = 8;
 			break;
 		case '9':
-			a = 1001;
+			a = 9;
 			break;
 		case '0':
 			a = 0;
@@ -119,4 +120,18 @@ int howIn(long long c, int na)
 		c /= 10000;
 	}
 	return k;
+}
+int transToSixteenAndCheck(int a,char find)
+{
+	int b, c,s,k=0;
+	s = transToInt(find);
+	while (a != 0)
+	{
+		b = a / 16;
+		c = a - (b*16);
+		if (c == s) k++;
+		a /= 16;
+	}
+	return k;
+
 }
