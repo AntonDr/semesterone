@@ -5,11 +5,9 @@ using namespace std;
 int main()
 {
 	int a,na;
-	long long b, c;
 	char find;
 	cin >> a>>find;
-	na=transToSixteenAndCheck(a, find);
-	cout << na;
+	cout << transToSixteenAndCheck(a, find);
 	
 	
 	system("pause");
