@@ -137,6 +137,7 @@ int transToSixteenAndCheck(int a,char find)
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void checkZeroOne(int a, int & j, int & k)
 {
 	while (a != 0)
@@ -146,6 +147,8 @@ void checkZeroOne(int a, int & j, int & k)
 		a /= 2;
 	}
 }
+=======
+>>>>>>> 8f49ddcb7ac9decf205224390dfc8ecf700f294f
 =======
 >>>>>>> 8f49ddcb7ac9decf205224390dfc8ecf700f294f
 =======
