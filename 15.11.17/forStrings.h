@@ -119,11 +119,13 @@ int findIndex(char *arr, char * find,int position)
 			{
 				p++;
 				if (arr[i + p] != find[p]) break;
+				
 			}
 			if (p == n) return i;
 			else p = 0;
 		}
 	}
+	return -1;
 }
 
 void strChange(char *arr, char *test,int n)
