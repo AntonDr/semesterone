@@ -117,8 +117,9 @@ int findIndex(char *arr, char * find)
 		{
 			while (p<=n-1)
 			{
-				if (arr[i + p] != find[p]) break;
 				p++;
+				if (arr[i + p] != find[p]) break;
+				
 			}
 			if (p == n) return i;
 			else p = 0;
