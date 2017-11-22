@@ -1,7 +1,13 @@
 #pragma once
 #include<iostream>
-
+#define N 256
 using namespace std;
+
+
+
+void strChangeBySymbol(char *, char, int, int);
+
+void strReplace(char *, char *,char *);
 
 int strLength(char *);
 
@@ -11,13 +17,15 @@ bool isLowerAlphabet(char);
 
 void toUpper(char *);
 
-int findIndex(char *, char *, int = 0);
+int findIndex(char *, char *,int =0);
 
 void resultOfcheckByOrder(int);
 
 int checkByOrder(char *, char *);
 
 bool equality(char *, char *);
+
+void strDel(char * source, char * str);
 
 int strLength(char * arr)
 {
@@ -124,6 +132,7 @@ int findIndex(char *arr, char * find,int position)
 			else p = 0;
 		}
 	}
+	return -1;
 }
 
 void strChange(char *arr, char *test,int n)
@@ -152,4 +161,66 @@ void strChange(char *arr, char *test,int n)
 		}
 	}
 
+}
+
+void strCopy(char * source, char * destination, int from, int to)
+{
+	if (from < 0) from = 0;
+	if (to > strLength(source)) to = strLength(source);
+
+	for (int i = from,j=0; i < to; i++,j++)
+	{
+		destination[j] = source[i];
+	}
+}
+
+void strConCat(char * source, char * str1, int index)
+{
+	int n = strLength(source), l = strLength(str1);
+	if (index > n) index = n;
+	if (n - l + index > 0)
+	{
+		strChangeBySymbol(source, '\0', index , n);
+	}
+	for (int i = index,j=0; j <l; i++,j++)
+	{
+		source[i] = str1[j];
+	}
+}
+
+void strChangeBySymbol(char *source, char ch, int from, int to)
+{
+	for (int i = from; i <=to; i++)
+	{
+		source[i] = ch;
+	}
+}
+
+void strDel(char * source, char * str)
+{
+	int n = findIndex(source, str);
+	char result[N] = "";
+	while (n!=-1)
+	{
+		strCopy(source, result, n + strLength(str), strLength(source));
+		strConCat(source, result, n);
+		n = findIndex(source, str, n);
+		strChangeBySymbol(result, '\0', 0, strLength(result));
+	}
+}
+
+void strReplace(char * source, char * str,char * replace)
+{
+	int k = strLength(replace);
+	int n = findIndex(source, str);
+	int l = strLength(str);
+	char result[N] = "";
+	while (n != -1)
+	{
+		strCopy(source, result, n + l, strLength(source));
+		strConCat(source, replace, n);
+		strConCat(source, result, n+k);
+		n = findIndex(source, str, n+k);
+		strChangeBySymbol(result, '\0', 0, strLength(result));
+	}
 }
