@@ -12,7 +12,7 @@ int main()
 
 	inputMatrix(matrix, n, m);
 	
-	displayMatrix(matrix, n, m);
+	//displayMatrix(matrix, n, m);
 
 	cout << endl;
 	
