@@ -263,7 +263,7 @@ void sortByDescendingly(int matrix[][N], int n, int m)
 		
 		k++;
 		
-		if (k = n - 1)
+		if (k == n - 1)
 		{
 			k = m;
 			j++;
